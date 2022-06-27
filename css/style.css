@@ -225,10 +225,11 @@ section > h2 {
 
 .slider-wrapper {
     display: flex;
+    flex-flow: column nowrap;
     position: relative;
     min-width: calc(100vw - 32px);
     min-height: 800px;
-    /* background-color: rgba(0, 98, 255, 0.207); */
+    margin-bottom: 40px;
 }
 
 .fade-left {
@@ -290,5 +291,66 @@ section > h2 {
 }
 
 .bullets {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 10px;   
+    min-height: 20px;
+    max-height: 20px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
 
+.bullet {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #f2785c80;
+}
+
+.bullet-current {
+    background-color: #f2785cff;
+}
+
+.slider-button {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-top: 22px;
+}
+
+.slider-button button {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 10px;
+    width: 228px;
+    padding: 10px 32px;
+    color: #fff;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    border: none;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    background: #0D606F;
+    border-radius: 10px;
+}
+
+.slider-button > button > span {
+    line-height: 40px;
+}
+
+.section-stories {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 7px;
+    background-color: rgba(1, 181, 181, 0.211);
+}
+
+.stories-wrapper {
+    
 }

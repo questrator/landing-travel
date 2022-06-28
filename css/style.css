@@ -1,15 +1,24 @@
+* {scroll-behavior: smooth;}
+*:hover {transition: 0.5s;}
+*:focus {transition: 0s;}
+*::selection {
+    color: #FFFFFF;
+    background: #0D606F;
+}
 
-
-*:hover {
-    transition: 0.3s;
+h1::selection, h2::selection, h3::selection {
+    color: #FFFFFF;
+    background: #F2785C;
 }
 
 body {
     font-family: 'Red Hat Text', 'Segoe UI', Tahoma, Verdana, sans-serif;
-    scroll-behavior: smooth;
+    
 }
 
 button {
+    display: block;
+    position: relative;
     color: #fff;
     font-family: 'Red Hat Text';
     font-style: normal;
@@ -17,10 +26,15 @@ button {
     background-color: #0D606F;
     border: none;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 button:hover {
     background-color: #F2785C;
+}
+
+button:active {
+    top: 1px;
 }
 
 .header-wrapper {
@@ -113,8 +127,7 @@ button:hover {
 }
 
 .menu-list > li > a:hover {
-    color: #ffdad2;
-    text-decoration: dashed;
+    color: #792c17;
 }
 
 .login-block {
@@ -132,13 +145,8 @@ button:hover {
 }
 
 .login-button:hover {
-    background-color: #227c8b;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.login-button:active {
-    top: 1px;
+    background-color: #FFFFFF;
+    color: #0D606F;
 }
 
 .header {
@@ -308,6 +316,7 @@ section > h2 {
 
 .step-icon {
     display: flex;
+    position: relative;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
@@ -316,6 +325,11 @@ section > h2 {
     background: #F2785C;
     border-radius: 16px;
     margin-bottom: 30px;
+}
+
+.step-icon:hover {
+    bottom: 3px;
+    background: #0D606F;
 }
 
 .step-text {
@@ -412,44 +426,53 @@ section > h2 {
 .bullet {
     display: flex;
     flex-flow: row nowrap;
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
+    width: 16px;
+    height: 16px;
     background-color: #f2785c80;
+    cursor: pointer;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: transparent;
+    border-style: solid;
+}
+
+.bullet:hover {
+    border-color: #0d606fff;
 }
 
 .bullet-current {
     background-color: #f2785cff;
 }
 
-.slider-button {
+.slider-button, .stories-button {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     margin-top: 22px;
+    margin-left: 4px;
 }
 
-.slider-button button {
+.stories-button {
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+.slider-button button, .stories-button button {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    gap: 10px;
+    gap: 13px;
     width: 228px;
     padding: 10px 32px;
-    color: #fff;
-    font-family: 'Red Hat Text';
-    font-style: normal;
-    font-weight: 500;
     font-size: 24px;
     line-height: 32px;
     border: none;
     box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
-    background: #0D606F;
-    border-radius: 10px;
+    
 }
 
-.slider-button > button > span {
-    line-height: 40px;
+.slider-button > button > span, .stories-button > button > span {
+    line-height: 40px;    
 }
 
 .section-stories {
@@ -533,4 +556,42 @@ section > h2 {
     font-weight: 700;
     text-decoration-line: underline;
     color: #0D606F;
+}
+
+.story-description p a:hover {
+    color: #F2785C;
+}
+
+.footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 1440px;
+    height: 61px;
+}
+
+.github {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 50px;
+    width: 300px;
+    background-color: rgba(137, 43, 226, 0.329);
+}
+
+.copyright {
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.socials {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 50px;
+    width: 300px;
+    background-color: rgba(137, 43, 226, 0.329);
 }

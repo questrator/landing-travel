@@ -1,5 +1,26 @@
+
+
+*:hover {
+    transition: 0.3s;
+}
+
 body {
     font-family: 'Red Hat Text', 'Segoe UI', Tahoma, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+button {
+    color: #fff;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    background-color: #0D606F;
+    border: none;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #F2785C;
 }
 
 .header-wrapper {
@@ -91,7 +112,7 @@ body {
     line-height: 21px;
 }
 
-.menu-list>li>a:hover {
+.menu-list > li > a:hover {
     color: #ffdad2;
     text-decoration: dashed;
 }
@@ -104,22 +125,16 @@ body {
 .login-button {
     position: relative;
     top: 0px;
-    color: #fff;
-    font-family: 'Red Hat Text';
-    font-style: normal;
-    font-weight: 500;
     font-size: 16px;
     line-height: 21px;
     padding: 10px 30px;
-    background-color: #0D606F;
-    border: none;
-    border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
 }
 
 .login-button:hover {
     background-color: #227c8b;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .login-button:active {
@@ -149,8 +164,86 @@ body {
 .header-block {
     display: flex;
     flex-flow: column nowrap;
+    align-items: flex-start;
+    box-sizing: border-box;
+    margin-left: 120px;
+    margin-top: 122px;
+    width: 892px;
+    height: 100%;
     top: 200px;
-    background-color: rgba(153, 50, 204, 0.258);
+}
+
+.header-title {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 96px;
+    color: #FFFFFF;
+    margin: 0px 0px 0px 1px;
+}
+
+.header-subtitle {
+    font-family: 'Aleo';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin: 32px 0px 0px 0px;
+}
+
+.search-block {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0px 18px;
+    width: 100%;
+    height: 95px;
+    margin-top: 46px;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.search-line {
+    position: relative;
+    width: 560px;
+    height: 40px;
+    box-sizing: border-box;
+    padding-left: 24px;
+    border: none;
+    font-family: 'Aleo';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;    
+    color: #0D606F;   
+    background-color: transparent;
+}
+
+.search-line::placeholder {    
+    color: #F2785C; 
+}
+
+.search-line:focus-visible {    
+    outline: none;
+}
+
+.search-button {
+    width: 228px;
+    height: 59px;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+    background: #0D606F;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border: none;
+    border-radius: 10px;
 }
 
 .main {
@@ -202,10 +295,15 @@ section > h2 {
 
 .step {
     display: flex;
+    position: relative;
     flex-flow: column nowrap;
     align-items: center;
     width: 30%;
     margin-bottom: 65px;
+}
+
+.step:last-child {
+    right: 36px;
 }
 
 .step-icon {

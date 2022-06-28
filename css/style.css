@@ -591,7 +591,13 @@ section > h2 {
 .socials {
     display: flex;
     flex-flow: row nowrap;
-    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0px 120px 0px 39px;
     width: 300px;
-    background-color: rgba(137, 43, 226, 0.329);
+}
+
+.socials a {
+    height: 34px;
 }

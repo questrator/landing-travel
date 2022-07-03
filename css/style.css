@@ -263,8 +263,13 @@ button:active {
     align-items: center;
     max-width: 100%;
     min-width: 1440px;
-    min-height: 100px;
+}
 
+@media (max-width: 390px) {
+    .main {
+        max-width: 100%;
+        min-width: 360px;
+    }
 }
 
 section {
@@ -278,10 +283,14 @@ section {
     flex-flow: column nowrap;
     max-width: 100%;
     min-width: 1440px;
-    min-height: 100px;
     margin-top: 48px;
     margin-bottom: 0px;
 }
+
+@media (max-width: 390px) {
+    .steps {
+        min-width: 360px;
+    }
 
 section > h2 {
     font-family: 'Red Hat Text';

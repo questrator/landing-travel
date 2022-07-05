@@ -289,7 +289,7 @@ section {
     flex-flow: column nowrap;
     max-width: 100%;
     width: 100%;
-    min-width: 320px;
+    min-width: 240px;
     margin-top: 48px;
     margin-bottom: 0px;
 }
@@ -348,6 +348,7 @@ section > h2 {
 
 @media (max-width: 320px) {
     .steps-icons {
+        min-width: 240px;
         flex-flow: column nowrap;
     }
 }
@@ -363,7 +364,7 @@ section > h2 {
 }
 
 @media (max-width: 320px) {
-    .steps {
+    .step {
         max-width: 100%;
         width: 100%;
     }
@@ -432,6 +433,16 @@ section > h2 {
     .step-3 {align-self: flex-end;}
 }
 
+@media (max-width: 320px) {
+    .step-1 > img {width: 35px;}
+    .step-2 > img {width: 35px;}
+    .step-3 > img {width: 40px;}
+
+    .step-1 {align-self: center;}
+    .step-2 {align-self: center;}
+    .step-3 {align-self: center;}
+}
+
 .step-icon:hover {
     transform: translateY(-6px);
     background: #0D606F;
@@ -455,8 +466,7 @@ section > h2 {
     .step-text {
         font-size: 20px;
         line-height: 24px;       
-    }
-    
+    }    
 }
 
 @media (max-width: 768px) {
@@ -474,6 +484,12 @@ section > h2 {
     .step-1 + .step-text {text-align: left;}
     .step-2 + .step-text {text-align: center;}
     .step-3 + .step-text {text-align: right;}
+}
+
+@media (max-width: 320px) {
+    .step-1 + .step-text {text-align: center;}
+    .step-2 + .step-text {text-align: center;}
+    .step-3 + .step-text {text-align: center;}
 }
 
 .destinations {}

@@ -274,7 +274,7 @@ button:active {
 @media (max-width: 1470px) {
     .main {
         max-width: 100%;
-        min-width: 360px;
+        min-width: 240px;
     }
 }
 
@@ -343,7 +343,12 @@ section > h2 {
 @media (max-width: 1470px) {
     .steps-icons {
         min-width: 320px;
-        padding: 0px 15px 0px 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    .steps-icons {
+        flex-flow: column nowrap;
     }
 }
 
@@ -353,8 +358,15 @@ section > h2 {
     flex-flow: column nowrap;
     align-items: center;
     max-width: 25%;
-    width: 30%;
+    width: 25%;
     margin-bottom: 65px;
+}
+
+@media (max-width: 320px) {
+    .steps {
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 .step-icon {
@@ -433,7 +445,6 @@ section > h2 {
     font-size: 20px;
     line-height: 24px;
     color: #0D606F;
-    background-color: rgba(0, 191, 255, 0.364);
 }
 
 .step-1 + .step-text {text-align: center;}

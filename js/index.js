@@ -34,17 +34,18 @@ console.log("Сумма баллов: %d из 100", sum);
 
 
 const menuBurger = document.querySelector(".menu-burger");
+const menuBurgerBg = document.querySelector(".menu-burger-bg");
 const navMobile = document.querySelector(".nav-mobile");
 navMobile.addEventListener("click", showBurgerMenu);
-menuBurger.addEventListener("click", hideBurgerMenu);
+[menuBurger, menuBurgerBg].forEach(e => e.addEventListener("click", hideBurgerMenu));
 
 function showBurgerMenu() {
-    console.log("show");
     menuBurger.style.top = "0px";
+    menuBurgerBg.style.display = "block";
 }
 
 function hideBurgerMenu(event) {
-    console.log("hide");
     event.stopPropagation();
     menuBurger.style.top = "-200px";
+    menuBurgerBg.style.display = "none";
 }

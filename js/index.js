@@ -31,3 +31,20 @@ sum = (sum > 100) ? 100 : sum;
 console.warn("Если не видите ниже таблицу, перезагрузите страницу, не закрывая консоль");
 console.table(review);
 console.log("Сумма баллов: %d из 100", sum);
+
+
+const menuBurger = document.querySelector(".menu-burger");
+const navMobile = document.querySelector(".nav-mobile");
+navMobile.addEventListener("click", showBurgerMenu);
+menuBurger.addEventListener("click", hideBurgerMenu);
+
+function showBurgerMenu() {
+    console.log("show");
+    menuBurger.style.top = "0px";
+}
+
+function hideBurgerMenu(event) {
+    console.log("hide");
+    event.stopPropagation();
+    menuBurger.style.top = "-200px";
+}
